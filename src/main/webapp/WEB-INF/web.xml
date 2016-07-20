@@ -1,12 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
     <display-name>appwebcrud</display-name>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>ServletIndex</display-name>
+    	<servlet-name>ServletIndex</servlet-name>
+    	<servlet-class>com.enlawebdekaaf.servlet.ServletIndex</servlet-class>
+    </servlet>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>ServletActualizar</display-name>
+    	<servlet-name>ServletActualizar</servlet-name>
+    	<servlet-class>com.enlawebdekaaf.servlet.ServletActualizar</servlet-class>
+    </servlet>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>ServletEliminar</display-name>
+    	<servlet-name>ServletEliminar</servlet-name>
+    	<servlet-class>com.enlawebdekaaf.servlet.ServletEliminar</servlet-class>
+    </servlet>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>ServletInsertar</display-name>
+    	<servlet-name>ServletInsertar</servlet-name>
+    	<servlet-class>com.enlawebdekaaf.servlet.ServletInsertar</servlet-class>
+    </servlet>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>ServletMostrar</display-name>
+    	<servlet-name>ServletMostrar</servlet-name>
+    	<servlet-class>com.enlawebdekaaf.servlet.ServletMostrar</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>ServletIndex</servlet-name>
+    	<url-pattern>/ServletIndex</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>ServletActualizar</servlet-name>
+    	<url-pattern>/ServletActualizar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>ServletEliminar</servlet-name>
+    	<url-pattern>/ServletEliminar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>ServletInsertar</servlet-name>
+    	<url-pattern>/ServletInsertar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>ServletMostrar</servlet-name>
+    	<url-pattern>/ServletMostrar</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>ServletIndex</welcome-file>
         </welcome-file-list>
     </web-app>
