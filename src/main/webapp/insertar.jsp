@@ -11,7 +11,7 @@
         <h1>Insertar Datos</h1>
         
         <a href="/appwebcrud/ServletIndex">Ir a Index</a>
-        
+        <br>
         <form action="/appwebcrud/ServletInsertar" method="post">
         	<label for="txtNombre">Nombre</label>
         	<input type="text" id="txtNombre" name="txtNombre">
@@ -30,6 +30,15 @@
         	<br>
         	<input type="submit" value="Registrar Persona">
         </form>
+        <%
+        	if (request.getAttribute("mensaje") != null){
+        		%>
+        		<br>
+        		<br>
+        		<b><%=request.getAttribute("mensaje") %></b>
+        		<%
+        	}
+        %>
         
     </body>
 </html>

@@ -7,7 +7,7 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.exceptions.MySQLDataException;
 
 public class Conexion {
-	private final String servidor="jdbc:mysql://localhost/dbappwebconexionjdbc";
+	private final String servidor="jdbc:mysql://localhost/dbappwebcrud";
 	private final String usuario="root";
 	private final String contrasenia="123456";
 	private Connection conexion=null;
