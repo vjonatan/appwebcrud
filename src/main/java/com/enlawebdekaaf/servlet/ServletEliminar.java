@@ -1,10 +1,14 @@
 package com.enlawebdekaaf.servlet;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.enlawebdekaaf.appwebcrud.Conexion;
+import com.mysql.jdbc.PreparedStatement;
 
 /**
  * Servlet implementation class ServletEliminar
@@ -24,8 +28,9 @@ public class ServletEliminar extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		request.getRequestDispatcher("eliminar.jsp").forward(request, response);
+		
 	}
 
 	/**
