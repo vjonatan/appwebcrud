@@ -29,7 +29,31 @@ public class ServletEliminar extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.getRequestDispatcher("eliminar.jsp").forward(request, response);
+		Conexion conexion = new Conexion();		
+		
+		try {
+			
+			String sql = "delete from persona where id=?";
+		
+			PreparedStatement ps = (PreparedStatement)conexion.getConexion().prepareStatement(sql);
+			
+			ps.setString(1, request.getParameter("id"));
+			
+			ps.execute();
+			
+			ps.close();
+				
+			request.getRequestDispatcher("eliminar.jsp").forward(request, response);
+			
+		}catch(Exception e) {
+			
+			System.out.println(e);
+		
+		}finally{
+			
+			conexion.cerrarConexion();
+			
+		}			
 		
 	}
 

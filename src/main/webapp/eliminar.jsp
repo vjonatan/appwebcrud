@@ -8,6 +8,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Registro Eliminado</h1>
+        <ul>
+        	<li><a href="/appwebcrud/ServletIndex">Inicio</a></li>        	
+        </ul>
     </body>
 </html>
